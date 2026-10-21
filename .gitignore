@@ -1,0 +1,32 @@
+# Publish source and documentation through an allowlist.
+*
+!*/
+!*.py
+!*.cpp
+!*.h
+!*.md
+!requirements*.txt
+!.gitignore
+!pytest.ini
+
+.git/
+.venv/
+__pycache__/
+.pytest_cache/
+build/
+*.egg-info/
+**/results/
+**/results_*/
+**/artifacts/
+**/cache/
+**/checkpoints/
+
+# motif_results also contains required analysis engines: retain their sources.
+**/motif_results/*
+!**/motif_results/sibling_topology_analysis/
+!**/motif_results/sibling_topology_analysis_new/
+!**/motif_results/sibling_topology_analysis_ranking_normalized/
+!**/motif_results/sibling_topology_topology(only)_analysis/
+!**/motif_results/tri7_trace_analysis(all)/
+
+# All study inputs, count matrices, figures, run logs and compiled objects stay local.
